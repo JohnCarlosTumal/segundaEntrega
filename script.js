@@ -42,7 +42,7 @@ function mostrarCarritoUno() {
         imageUrl: 'img/canotaje.jpg',
         imageWidth: 400,
         imageHeight: 200,
-        imageAlt: 'Custom image',
+        imageAlt: 'imagen canotaje',
       })
 }
 
@@ -53,7 +53,7 @@ function mostrarCarritoDos() {
         imageUrl: 'img/kayak.jpg',
         imageWidth: 400,
         imageHeight: 200,
-        imageAlt: 'Custom image',
+        imageAlt: 'imagen kajak',
       })
 }
 
