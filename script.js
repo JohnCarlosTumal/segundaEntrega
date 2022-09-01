@@ -67,19 +67,18 @@ boton.addEventListener('click', () => {
     Toastify({
         text: "Producto agregado al carrito",
         duration: 3000,
-        //destination: "https://github.com/apvarun/toastify-js",
-        //newWindow: false,
+       
         close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
+        gravity: "top",
+        position: "right", 
+        stopOnFocus: true, 
         style: {
             background: "linear-gradient(to right, #2C5392, #203A80, #0F2050)",
             fontFamily: "Arial, Helvetica, sans-serif"
         },
         onClick: function () {
             mostrarCarrito()
-        } // Callback after click
+        } 
     }).showToast();
 })
 
@@ -89,9 +88,9 @@ botonDos.addEventListener('click', () => {
         text: "Producto agregado al carrito",
         duration: 3000,        
         close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true, 
         style: {
             background: "linear-gradient(to right, #2C5364, #203A80, #0F2050)",
             fontFamily: "Arial, Helvetica, sans-serif"
@@ -125,9 +124,9 @@ botonTareas.addEventListener('click', () => {
         const tarjetaTarea = document.getElementById(`reserva${indice}`)
 
         tarjetaTarea.children[1].children[2].addEventListener('click', () => {
-            tarjetaTarea.remove() //DOM
-            reservas.splice(indice, 1) //Array
-            localStorage.setItem('reservas', JSON.stringify(reservas)) //Local storage
+            tarjetaTarea.remove() 
+            reservas.splice(indice, 1) 
+            localStorage.setItem('reservas', JSON.stringify(reservas)) 
             console.log(`${reserva.nombre} Eliminada`)
         })
     })
