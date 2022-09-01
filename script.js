@@ -34,12 +34,72 @@ form.addEventListener('submit', (e) => {
 })
 
 
+
+function mostrarCarritoUno() {
+    Swal.fire({
+        title: 'Felicitaciones !',
+        text: 'Realizaste tu reserva',
+        imageUrl: '../img/canotaje.jpg',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
+}
+
+function mostrarCarritoDos() {
+    Swal.fire({
+        title: 'Felicitaciones !',
+        text: 'Realizaste tu reserva',
+        imageUrl: '../img/kayak.jpg',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })
+}
+
+
+
+
+
+
 boton.addEventListener('click', () => {
-    alert("Actividad seleccionada")
+    mostrarCarritoUno()
+    Toastify({
+        text: "Producto agregado al carrito",
+        duration: 3000,
+        //destination: "https://github.com/apvarun/toastify-js",
+        //newWindow: false,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, #2C5392, #203A80, #0F2050)",
+            fontFamily: "Arial, Helvetica, sans-serif"
+        },
+        onClick: function () {
+            mostrarCarrito()
+        } // Callback after click
+    }).showToast();
 })
 
 botonDos.addEventListener('click', () => {
-    alert("Actividad seleccionada")
+    mostrarCarritoDos()
+    Toastify({
+        text: "Producto agregado al carrito",
+        duration: 3000,        
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, #2C5364, #203A80, #0F2050)",
+            fontFamily: "Arial, Helvetica, sans-serif"
+        },
+        onClick: function () {
+            mostrarCarrito()
+        } 
+    }).showToast();
 })
 
 
