@@ -39,7 +39,7 @@ function mostrarCarritoUno() {
     Swal.fire({
         title: 'Felicitaciones !',
         text: 'Realizaste tu reserva',
-        imageUrl: '../img/canotaje.jpg',
+        imageUrl: 'img/canotaje.jpg',
         imageWidth: 400,
         imageHeight: 200,
         imageAlt: 'Custom image',
@@ -50,7 +50,7 @@ function mostrarCarritoDos() {
     Swal.fire({
         title: 'Felicitaciones !',
         text: 'Realizaste tu reserva',
-        imageUrl: '../img/kayak.jpg',
+        imageUrl: 'img/kayak.jpg',
         imageWidth: 400,
         imageHeight: 200,
         imageAlt: 'Custom image',
