@@ -1,0 +1,16 @@
+[
+    {
+        "img": "esqui.jpg",
+        "actividad": "tabla",
+        "descripcion": "disfruta de la diversion en agua sobre una tabla",
+        "costo": "30000"       
+    },
+
+    
+    {
+        "img": "lancha4.jpg",
+        "actividad": "lancha",
+        "descripcion": "disfruta de la diversion en agua sobre una lancha con tu familia o amigos",
+        "costo": "35000"         
+    }
+]

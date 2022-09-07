@@ -62,6 +62,8 @@ function mostrarCarritoDos() {
 
 
 
+// -----EVENTO BOTON ----
+
 boton.addEventListener('click', () => {
     mostrarCarritoUno()
     Toastify({
@@ -81,6 +83,9 @@ boton.addEventListener('click', () => {
         } 
     }).showToast();
 })
+
+
+// -----EVENTO BOTON ----
 
 botonDos.addEventListener('click', () => {
     mostrarCarritoDos()
@@ -102,6 +107,7 @@ botonDos.addEventListener('click', () => {
 })
 
 
+// -----EVENTO BOTON ----
 botonTareas.addEventListener('click', () => {
     const tarStorage = JSON.parse(localStorage.getItem('reservas'))
 
@@ -130,5 +136,32 @@ botonTareas.addEventListener('click', () => {
             console.log(`${reserva.nombre} Eliminada`)
         })
     })
+    
 })
+
+
+//--------------------FETCH ------------------------------------
+
+const divFetch = document.getElementById("divFetch")
+
+fetch('./json/actividades.json')
+.then(response => response.json() )
+.then(actividades => {
+    actividades.forEach((actividad, indice) =>{
+        divFetch.innerHTML += `
+        <div class="card" id="producto${indice}" style="width: 38rem;margin:3px;">
+        <img src="./img/${actividad.img}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${actividad.actividad}</h5>
+                <p class="card-text">Marca: ${actividad.descripcion}</p>
+                <p class="card-text">Precio: $${actividad.costo}</p>
+                
+                <button class="btn">Seleccionar</button>
+            </div>
+        </div>        
+        `        
+    })
+})
+
+
 
