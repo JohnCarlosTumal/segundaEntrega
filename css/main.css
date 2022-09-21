@@ -1,6 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Ms+Madi&display=swap');
+
+body{
+    background-color: rgb(206, 206, 171);
+}
+
 section {
     text-align: center;
     color: salmon;
+    font-family: 'Ms Madi', cursive;
+    font-size:x-large;
+    
+}
+
+.titulo{
+    font-family: 'Ms Madi', cursive;
 }
 
 span {
@@ -8,12 +22,12 @@ span {
     margin: 50px;
 }
 
-.span1{
+.span1 {
     display: block;
     margin: 10px;
 }
 
-.span2{
+.span2 {
     display: block;
     margin: 10px;
 }
@@ -112,27 +126,33 @@ li {
 
 }
 
-button{
+button {
     color: rgb(248, 247, 247);
     background-color: brown;
     width: 150px;
     height: 30px;
 
-    
-    }
 
-.btn{
+}
+
+.btn {
     color: rgb(248, 247, 247);
     background-color: brown;
     width: 150px;
-    height: 30px; 
+    height: 30px;
+
 }
 
-#divFetch{
-display: flex;
-justify-content: space-evenly;
-    }
 
-    .card{
-        text-align: center;
-    }
+#divFetch {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.card {
+    text-align: center;
+    box-shadow: -5px -5px 10px rgb(115, 114, 114), 5px 5px 10px black;
+    padding: 5px;
+    
+}

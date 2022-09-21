@@ -12,5 +12,12 @@
         "actividad": "lancha",
         "descripcion": "disfruta de la diversion en agua sobre una lancha con tu familia o amigos",
         "costo": "35000"         
+    },
+    {
+        "img": "cabania2.jpg",
+        "actividad": "hospedaje cabaña familiar",
+        "descripcion": "disfruta de un ambiente diferente con el espectacular hospedaje en nuestras instalaciones",
+        "costo": "55000"         
     }
+    
 ]
