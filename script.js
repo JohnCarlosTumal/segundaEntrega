@@ -1,3 +1,38 @@
+
+// botones de cambio de color de pagina
+
+let darkMode
+
+if (localStorage.getItem("darkMode")) { //null si no existe la key
+    darkMode = localStorage.getItem("darkMode") //consulto el local storage
+} else {
+    localStorage.setItem("darkMode", "light") //Creo
+}
+
+if (darkMode == "dark") {
+    document.body.classList.add('darkMode')
+}
+
+const botonDarkMode = document.getElementById("botonDarkMode")
+const botonLightMode = document.getElementById("botonLightMode")
+const botonProductos = document.getElementById("botonProductos")
+const divProductos = document.getElementById("divProductos")
+
+botonDarkMode.addEventListener('click', () => {    
+    document.body.classList.add('darkMode')
+    localStorage.setItem("darkMode", "dark")
+})
+
+botonLightMode.addEventListener('click', () => {
+    document.body.classList.remove('darkMode')
+    localStorage.setItem("darkMode", "light")
+})
+
+
+
+
+// creacion de objeto reserva
+
 class Reserva {
     constructor(nombre, telefono, email) {
         this.nombre = nombre
@@ -6,6 +41,8 @@ class Reserva {
     }
 }
 
+
+// creacion array vacio reservas
 let reservas = []
 
 if (localStorage.getItem('reservas')) {
@@ -57,12 +94,23 @@ function mostrarCarritoDos() {
       })
 }
 
+function mostrarCarritoTres() {
+    Swal.fire({
+        title: 'Felicitaciones !',
+        text: 'Realizaste tu reserva',
+        imageUrl: 'img/kayak.jpg',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'imagen kajak',
+      })
+}
 
 
 
 
 
-// -----EVENTO BOTON ----
+
+// -----EVENTO BOTON AGREGAR AL CARRITO ----
 
 boton.addEventListener('click', () => {
     mostrarCarritoUno()
@@ -85,7 +133,7 @@ boton.addEventListener('click', () => {
 })
 
 
-// -----EVENTO BOTON ----
+// -----EVENTO click BOTON ----
 
 botonDos.addEventListener('click', () => {
     mostrarCarritoDos()
@@ -111,6 +159,8 @@ botonDos.addEventListener('click', () => {
 botonTareas.addEventListener('click', () => {
     const tarStorage = JSON.parse(localStorage.getItem('reservas'))
 
+
+    // ADICIONANDO EL DOM
     divTareas.innerHTML = ""
 
     tarStorage.forEach((reserva, indice) => {
@@ -125,6 +175,8 @@ botonTareas.addEventListener('click', () => {
             </div>        
         `
     })
+
+    // eliminar reserva
 
     tarStorage.forEach((reserva, indice) => {
         const tarjetaTarea = document.getElementById(`reserva${indice}`)
@@ -142,12 +194,16 @@ botonTareas.addEventListener('click', () => {
 
 //--------------------FETCH ------------------------------------
 
+//llamando a html
 const divFetch = document.getElementById("divFetch")
+
+//importando array desde actividades.json
 
 fetch('./json/actividades.json')
 .then(response => response.json() )
 .then(actividades => {
     actividades.forEach((actividad, indice) =>{
+        // adicionando dom 
         divFetch.innerHTML += `
         <div class="card" id="producto${indice}" style="width: 38rem;margin:3px;">
         <img src="./img/${actividad.img}" class="card-img-top" alt="...">
@@ -162,6 +218,5 @@ fetch('./json/actividades.json')
         `        
     })
 })
-
 
 
