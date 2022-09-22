@@ -13,16 +13,21 @@ if (darkMode == "dark") {
     document.body.classList.add('darkMode')
 }
 
+
+// llamando id desde index.html
+
 const botonDarkMode = document.getElementById("botonDarkMode")
 const botonLightMode = document.getElementById("botonLightMode")
 const botonProductos = document.getElementById("botonProductos")
 const divProductos = document.getElementById("divProductos")
 
+// modo oscuro
 botonDarkMode.addEventListener('click', () => {    
     document.body.classList.add('darkMode')
     localStorage.setItem("darkMode", "dark")
 })
 
+//modo claro
 botonLightMode.addEventListener('click', () => {
     document.body.classList.remove('darkMode')
     localStorage.setItem("darkMode", "light")
@@ -51,6 +56,9 @@ if (localStorage.getItem('reservas')) {
     localStorage.setItem('reservas', JSON.stringify(reservas))
 }
 
+
+// llamando id de index
+
 const boton = document.getElementById("boton")
 const botonDos = document.getElementById("botonDos")
 const form = document.getElementById("idForm")
@@ -70,7 +78,7 @@ form.addEventListener('submit', (e) => {
     form.reset()
 })
 
-
+// cuadros de alerta --------------------------------
 
 function mostrarCarritoUno() {
     Swal.fire({
@@ -94,19 +102,7 @@ function mostrarCarritoDos() {
       })
 }
 
-function mostrarCarritoTres() {
-    Swal.fire({
-        title: 'Felicitaciones !',
-        text: 'Realizaste tu reserva',
-        imageUrl: 'img/kayak.jpg',
-        imageWidth: 400,
-        imageHeight: 200,
-        imageAlt: 'imagen kajak',
-      })
-}
-
-
-
+// ---------------------------------------------------
 
 
 
